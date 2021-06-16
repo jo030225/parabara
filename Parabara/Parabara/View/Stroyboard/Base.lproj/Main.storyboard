@@ -64,6 +64,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="mainImageView" destination="wNO-AM-D1d" id="5A4-oB-Jjo"/>
                                             <outlet property="mainPrice" destination="ZjH-zh-aLC" id="FTR-JL-eFD"/>
                                             <outlet property="mainTitle" destination="yGz-LR-BJo" id="LD8-QP-g2d"/>
                                         </connections>
@@ -81,6 +82,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Parabara" id="Fjd-3z-yKr">
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="grF-A3-RVc"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tha-YJ-iIu"/>
                     </navigationItem>
                     <connections>

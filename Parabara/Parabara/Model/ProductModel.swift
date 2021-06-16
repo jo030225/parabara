@@ -9,11 +9,13 @@ import Foundation
 
 struct ProductModel: Codable {
     let status: Int
-    let data: [Data]
+    let data: ProductData
+    let message: String
 }
 
-struct Data: Codable {
+struct ProductData: Codable {
     let rows: [Rows]
+    let records: Int
 }
 
 struct Rows: Codable {

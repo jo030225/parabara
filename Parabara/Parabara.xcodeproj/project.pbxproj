@@ -19,7 +19,7 @@
 		BD0B870C2678CEF400761BE1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD0B870B2678CEF400761BE1 /* Kingfisher */; };
 		BD0B870E2679781900761BE1 /* ProductSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B870D2679781900761BE1 /* ProductSearchModel.swift */; };
 		BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A85267ACCF200D7D703 /* DeleteViewController.swift */; };
-		BD987A89267B0F0000D7D703 /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A88267B0F0000D7D703 /* CreateViewController.swift */; };
+		BD987A89267B0F0000D7D703 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,7 +35,7 @@
 		BD0B87052678C67500761BE1 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		BD0B870D2679781900761BE1 /* ProductSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchModel.swift; sourceTree = "<group>"; };
 		BD987A85267ACCF200D7D703 /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
-		BD987A88267B0F0000D7D703 /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
+		BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,7 +153,7 @@
 		BD987A87267B0EE600D7D703 /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				BD987A88267B0F0000D7D703 /* CreateViewController.swift */,
+				BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -236,7 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD987A89267B0F0000D7D703 /* CreateViewController.swift in Sources */,
+				BD987A89267B0F0000D7D703 /* ImageUploadViewController.swift in Sources */,
 				BD0B86ED267886EA00761BE1 /* MainViewController.swift in Sources */,
 				BD0B86E9267886EA00761BE1 /* AppDelegate.swift in Sources */,
 				BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */,

@@ -154,7 +154,11 @@
                                 <segue destination="vrk-sx-UBA" kind="show" id="htN-sH-iHn"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tha-YJ-iIu"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tha-YJ-iIu">
+                            <connections>
+                                <segue destination="4xi-Ah-iY8" kind="show" id="U7s-Ad-aG8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="zv8-X3-qkq" id="3T9-xs-JVQ"/>
@@ -163,6 +167,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="138" y="823"/>
+        </scene>
+        <!--Image Upload-->
+        <scene sceneID="p38-0D-9Ue">
+            <objects>
+                <viewController id="4xi-Ah-iY8" customClass="ImageUploadViewController" customModule="Parabara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hPG-2r-t4y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eHw-LS-Rdg">
+                                <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Fko-AC-e0H"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttJ-kh-Z3b">
+                                <rect key="frame" x="181" y="648" width="52" height="30"/>
+                                <state key="normal" title="계속하기"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uDQ-9G-HMe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eHw-LS-Rdg" firstAttribute="trailing" secondItem="uDQ-9G-HMe" secondAttribute="trailing" id="0Bq-c0-R4u"/>
+                            <constraint firstItem="ttJ-kh-Z3b" firstAttribute="centerX" secondItem="hPG-2r-t4y" secondAttribute="centerX" id="4GN-DO-Zkm"/>
+                            <constraint firstItem="eHw-LS-Rdg" firstAttribute="centerY" secondItem="hPG-2r-t4y" secondAttribute="centerY" id="GYD-zn-aga"/>
+                            <constraint firstItem="ttJ-kh-Z3b" firstAttribute="top" secondItem="eHw-LS-Rdg" secondAttribute="bottom" constant="50" id="TdH-cp-4Uv"/>
+                            <constraint firstItem="eHw-LS-Rdg" firstAttribute="leading" secondItem="uDQ-9G-HMe" secondAttribute="leading" id="bk6-D1-2jw"/>
+                            <constraint firstItem="eHw-LS-Rdg" firstAttribute="centerX" secondItem="hPG-2r-t4y" secondAttribute="centerX" id="gx6-8p-hvX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Image Upload" id="g0C-6X-4gY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="q5C-KR-fsu">
+                            <connections>
+                                <action selector="imageAddButton:" destination="4xi-Ah-iY8" id="n5x-MS-k2s"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="eHw-LS-Rdg" id="A9d-vn-c6N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BGc-b2-qPm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1146" y="823"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sI0-b0-Fdc">

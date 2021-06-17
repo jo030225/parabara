@@ -12,6 +12,7 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var mainTitle: UILabel!
     @IBOutlet weak var mainPrice: UILabel!
+    @IBOutlet weak var mainId: UILabel!
     
     
 }

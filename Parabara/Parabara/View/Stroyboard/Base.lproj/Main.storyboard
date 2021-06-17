@@ -9,6 +9,63 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Delete-->
+        <scene sceneID="MFU-dr-LBp">
+            <objects>
+                <viewController id="vrk-sx-UBA" customClass="DeleteViewController" customModule="Parabara" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8S2-aw-Ll0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-1s-QrT">
+                                <rect key="frame" x="100" y="188" width="214" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="삭제할 ID:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98s-yF-tZ4">
+                                        <rect key="frame" x="0.0" y="0.0" width="69.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXC-0o-eNv">
+                                        <rect key="frame" x="90.5" y="0.0" width="123.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lbh-rf-Iwg">
+                                <rect key="frame" x="180" y="272" width="54" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="삭제">
+                                    <color key="titleColor" systemColor="systemRedColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteButton:" destination="vrk-sx-UBA" eventType="touchUpInside" id="dIw-T9-UcG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="0I5-zI-mfh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="0I5-zI-mfh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="lbh-rf-Iwg" secondAttribute="trailing" constant="180" id="5If-kr-XZV"/>
+                            <constraint firstItem="lbh-rf-Iwg" firstAttribute="top" secondItem="SdQ-1s-QrT" secondAttribute="bottom" constant="50" id="Jpx-r7-gic"/>
+                            <constraint firstItem="lbh-rf-Iwg" firstAttribute="centerX" secondItem="8S2-aw-Ll0" secondAttribute="centerX" id="LHS-Kv-HY2"/>
+                            <constraint firstItem="SdQ-1s-QrT" firstAttribute="centerX" secondItem="8S2-aw-Ll0" secondAttribute="centerX" id="T55-m9-QUK"/>
+                            <constraint firstItem="lbh-rf-Iwg" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0I5-zI-mfh" secondAttribute="leading" constant="180" id="fjp-GX-Ygb"/>
+                            <constraint firstItem="0I5-zI-mfh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="SdQ-1s-QrT" secondAttribute="trailing" constant="100" id="hHQ-yd-moD"/>
+                            <constraint firstItem="SdQ-1s-QrT" firstAttribute="leading" relation="lessThanOrEqual" secondItem="0I5-zI-mfh" secondAttribute="leading" constant="100" id="kT7-j4-Wfn"/>
+                            <constraint firstItem="SdQ-1s-QrT" firstAttribute="top" secondItem="0I5-zI-mfh" secondAttribute="top" constant="100" id="otJ-EJ-sQw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Delete" id="vKT-n1-Uz4"/>
+                    <connections>
+                        <outlet property="deleteTextField" destination="JXC-0o-eNv" id="xbH-UF-lKv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Ap-zy-auy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-743" y="823"/>
+        </scene>
         <!--Parabara-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -92,7 +149,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Parabara" id="Fjd-3z-yKr">
-                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="grF-A3-RVc"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="trash" id="grF-A3-RVc">
+                            <connections>
+                                <segue destination="vrk-sx-UBA" kind="show" id="htN-sH-iHn"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Tha-YJ-iIu"/>
                     </navigationItem>
                     <connections>
@@ -101,7 +162,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="125.89285714285714"/>
+            <point key="canvasLocation" x="138" y="823"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sI0-b0-Fdc">
@@ -129,6 +190,9 @@
         </systemColor>
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

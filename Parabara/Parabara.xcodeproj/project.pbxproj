@@ -18,6 +18,7 @@
 		BD0B87092678CD0C00761BE1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = BD0B87082678CD0C00761BE1 /* Alamofire */; };
 		BD0B870C2678CEF400761BE1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = BD0B870B2678CEF400761BE1 /* Kingfisher */; };
 		BD0B870E2679781900761BE1 /* ProductSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B870D2679781900761BE1 /* ProductSearchModel.swift */; };
+		BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A85267ACCF200D7D703 /* DeleteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BD0B87032678A7BF00761BE1 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		BD0B87052678C67500761BE1 /* ProductModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModel.swift; sourceTree = "<group>"; };
 		BD0B870D2679781900761BE1 /* ProductSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchModel.swift; sourceTree = "<group>"; };
+		BD987A85267ACCF200D7D703 /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0B86FF2678890E00761BE1 /* Main */,
+				BD987A84267ACA4700D7D703 /* Delete */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -134,6 +137,14 @@
 				BD0B87032678A7BF00761BE1 /* MainTableViewCell.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		BD987A84267ACA4700D7D703 /* Delete */ = {
+			isa = PBXGroup;
+			children = (
+				BD987A85267ACCF200D7D703 /* DeleteViewController.swift */,
+			);
+			path = Delete;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 			files = (
 				BD0B86ED267886EA00761BE1 /* MainViewController.swift in Sources */,
 				BD0B86E9267886EA00761BE1 /* AppDelegate.swift in Sources */,
+				BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */,
 				BD0B87042678A7BF00761BE1 /* MainTableViewCell.swift in Sources */,
 				BD0B86EB267886EA00761BE1 /* SceneDelegate.swift in Sources */,
 				BD0B87062678C67500761BE1 /* ProductModel.swift in Sources */,

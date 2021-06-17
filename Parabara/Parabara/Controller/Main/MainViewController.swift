@@ -41,7 +41,7 @@ class MainViewController: UIViewController {
         self.navigationItem.hidesSearchBarWhenScrolling = false
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchResultsUpdater = self
-        searchController.searchBar.placeholder = "검색"
+        searchController.searchBar.placeholder = "상품 ID 검색"
     }
     
     func apiCall() {
@@ -92,12 +92,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
             let encodingURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
             cell.mainTitle.text = searchModel?.data.title
             cell.mainPrice.text = "\(searchModel?.data.price ?? 0)원"
+            cell.mainId.text = "\(searchModel?.data.id ?? 0)"
             cell.mainImageView.kf.setImage(with: URL(string: encodingURL))
         } else {
             let url = model?.data.rows[indexPath.row].images[0] ?? ""
             let encodingURL = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
             cell.mainTitle.text = model?.data.rows[indexPath.row].title
             cell.mainPrice.text = "\(model?.data.rows[indexPath.row].price ?? 0)원"
+            cell.mainId.text = "\(model?.data.rows[indexPath.row].id ?? 0)"
             cell.mainImageView.kf.setImage(with: URL(string: encodingURL))
         }
         return cell

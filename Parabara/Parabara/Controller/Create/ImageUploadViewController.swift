@@ -36,13 +36,18 @@ class ImageUploadViewController: UIViewController {
                 switch response.response?.statusCode {
                 case 200:
                     self.successAlert()
-                    print("200")
+                    if let dic = value as? NSDictionary,
+                       let data = dic["data"] as? NSDictionary,
+                       let id = data["id"] as? Int {
+                        ImageManager.setImageId(id: id)
+                    }
+                    print("성공")
                 case 500:
                     self.failAlert(message: "Server Error")
-                    print("500")
+                    print("Server Error")
                 case 403:
                     self.failAlert(message: "권한 없음")
-                    print("403")
+                    print("권한 없음")
                 default:
                     self.failAlert(message: "알 수 없는 오류")
                     print("알 수 없는 오류")

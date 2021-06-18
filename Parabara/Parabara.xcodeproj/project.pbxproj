@@ -21,6 +21,7 @@
 		BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A85267ACCF200D7D703 /* DeleteViewController.swift */; };
 		BD987A89267B0F0000D7D703 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */; };
 		BD987A8E267C5D4300D7D703 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A8D267C5D4300D7D703 /* ImageManager.swift */; };
+		BD987A90267C6F3B00D7D703 /* ProductRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A8F267C6F3B00D7D703 /* ProductRegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		BD987A85267ACCF200D7D703 /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
 		BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
 		BD987A8D267C5D4300D7D703 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		BD987A8F267C6F3B00D7D703 /* ProductRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */,
+				BD987A8F267C6F3B00D7D703 /* ProductRegisterViewController.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */,
 				BD0B87042678A7BF00761BE1 /* MainTableViewCell.swift in Sources */,
 				BD0B86EB267886EA00761BE1 /* SceneDelegate.swift in Sources */,
+				BD987A90267C6F3B00D7D703 /* ProductRegisterViewController.swift in Sources */,
 				BD0B87062678C67500761BE1 /* ProductModel.swift in Sources */,
 				BD0B870E2679781900761BE1 /* ProductSearchModel.swift in Sources */,
 			);

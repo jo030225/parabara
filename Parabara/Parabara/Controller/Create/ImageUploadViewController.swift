@@ -35,15 +35,20 @@ class ImageUploadViewController: UIViewController {
                 print(value)
                 switch response.response?.statusCode {
                 case 200:
+                    self.successAlert()
                     print("200")
                 case 500:
+                    self.failAlert(message: "Server Error")
                     print("500")
                 case 403:
+                    self.failAlert(message: "권한 없음")
                     print("403")
                 default:
+                    self.failAlert(message: "알 수 없는 오류")
                     print("알 수 없는 오류")
                 }
             case .failure(let error):
+                self.failAlert(message: "네트워크 연결 확인해주세요.")
                 print(error)
             }
         }
@@ -51,14 +56,11 @@ class ImageUploadViewController: UIViewController {
     
     func alert() {
         let alert =  UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-        
         let library =  UIAlertAction(title: "사진앨범", style: .default) { (action) in self.openLibrary()
         }
-        
         let camera =  UIAlertAction(title: "카메라", style: .default) { (action) in
             self.openCamera()
         }
-        
         let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         
         alert.addAction(library)
@@ -67,10 +69,23 @@ class ImageUploadViewController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    func successAlert() {
+        let alert = UIAlertController(title: "업로드 완료", message: "업로드 완료!!!", preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    func failAlert(message: String) {
+        let alert = UIAlertController(title: "업로드 실패", message: message, preferredStyle: UIAlertController.Style.alert)
+        let ok = UIAlertAction(title: "확인", style: UIAlertAction.Style.default)
+        alert.addAction(ok)
+        present(alert, animated: true, completion: nil)
+    }
+    
     func openLibrary() {
         picker.sourceType = .photoLibrary
         present(picker, animated: false, completion: nil)
-        
     }
     func openCamera() {
         if(UIImagePickerController .isSourceTypeAvailable(.camera)){

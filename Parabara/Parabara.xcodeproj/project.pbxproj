@@ -20,6 +20,7 @@
 		BD0B870E2679781900761BE1 /* ProductSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0B870D2679781900761BE1 /* ProductSearchModel.swift */; };
 		BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A85267ACCF200D7D703 /* DeleteViewController.swift */; };
 		BD987A89267B0F0000D7D703 /* ImageUploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */; };
+		BD987A8E267C5D4300D7D703 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD987A8D267C5D4300D7D703 /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		BD0B870D2679781900761BE1 /* ProductSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchModel.swift; sourceTree = "<group>"; };
 		BD987A85267ACCF200D7D703 /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
 		BD987A88267B0F0000D7D703 /* ImageUploadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploadViewController.swift; sourceTree = "<group>"; };
+		BD987A8D267C5D4300D7D703 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				BD0B86E8267886EA00761BE1 /* AppDelegate.swift */,
 				BD0B86EA267886EA00761BE1 /* SceneDelegate.swift */,
+				BD987A8C267C5D1F00D7D703 /* Manager */,
 				BD0B86FC2678872D00761BE1 /* Model */,
 				BD0B86FD2678873700761BE1 /* View */,
 				BD0B86FE2678874000761BE1 /* Controller */,
@@ -158,6 +161,14 @@
 			path = Create;
 			sourceTree = "<group>";
 		};
+		BD987A8C267C5D1F00D7D703 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				BD987A8D267C5D4300D7D703 /* ImageManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -239,6 +250,7 @@
 				BD987A89267B0F0000D7D703 /* ImageUploadViewController.swift in Sources */,
 				BD0B86ED267886EA00761BE1 /* MainViewController.swift in Sources */,
 				BD0B86E9267886EA00761BE1 /* AppDelegate.swift in Sources */,
+				BD987A8E267C5D4300D7D703 /* ImageManager.swift in Sources */,
 				BD987A86267ACCF200D7D703 /* DeleteViewController.swift in Sources */,
 				BD0B87042678A7BF00761BE1 /* MainTableViewCell.swift in Sources */,
 				BD0B86EB267886EA00761BE1 /* SceneDelegate.swift in Sources */,

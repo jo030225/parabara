@@ -286,6 +286,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UsP-fJ-qtW">
                                 <rect key="frame" x="192" y="466" width="30" height="30"/>
                                 <state key="normal" title="등록"/>
+                                <connections>
+                                    <action selector="registerButton:" destination="aqa-X5-GCR" eventType="touchUpInside" id="XXn-i2-OP0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4kx-US-CC8"/>

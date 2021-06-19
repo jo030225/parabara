@@ -27,9 +27,11 @@ class ImageUploadViewController: UIViewController {
     }
     
     func imageUploadApi(data: Data) {
+        let URL = "https://api.recruit-test.parabara.kr/api/product/upload"
+        let token = "eyJpZCI6ODk9MiwicGhvbm"
         AF.upload(multipartFormData: { multipartFormData in
             multipartFormData.append(data, withName: "image", fileName: "\(data).jepg")
-        }, to: "https://api.recruit-test.parabara.kr/api/product/upload", method: .post, headers: ["x-token": "eyJpZCI6ODk9MiwicGhvbm"]).responseJSON { response in
+        }, to: URL, method: .post, headers: ["x-token": token]).responseJSON { response in
             switch response.result {
             case .success(let value):
                 print(value)

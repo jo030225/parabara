@@ -104,6 +104,13 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ContentManager.setProductId(id: model?.data.rows[indexPath.row].id ?? 0)
+        ContentManager.setProductTitle(title: model?.data.rows[indexPath.row].title ?? "")
+        ContentManager.setProductContent(content: model?.data.rows[indexPath.row].content ?? "")
+        ContentManager.setProductPrice(price: model?.data.rows[indexPath.row].price ?? 0)
+    }
 }
 
 extension MainViewController: UISearchResultsUpdating {

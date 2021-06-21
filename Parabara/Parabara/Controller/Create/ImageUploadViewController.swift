@@ -13,17 +13,19 @@ class ImageUploadViewController: UIViewController {
     let picker = UIImagePickerController()
     
     @IBOutlet weak var imageView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setting()
     }
     
-    func setting() {
-        picker.delegate = self
-    }
     @IBAction func imageAddButton(_ sender: UIBarButtonItem) {
         alert()
+    }
+    
+    func setting() {
+        picker.delegate = self
     }
     
     func imageUploadApi(data: Data) {

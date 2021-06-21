@@ -20,6 +20,10 @@ class UpdateViewController: UIViewController {
         setting()
     }
     
+    @IBAction func updateButton(_ sender: UIButton) {
+        checkAlert()
+    }
+    
     func setting() {
         titleTextField.delegate = self
         contentTextView.delegate = self
@@ -33,11 +37,6 @@ class UpdateViewController: UIViewController {
         priceTextField.text = "\(ContentManager.getProductPrice())"
     }
     
-    
-    @IBAction func updateButton(_ sender: UIButton) {
-        checkAlert()
-    }
-    
     func updateApi(id: Int, title: String, content: String, price: Int) {
         let URL = "https://api.recruit-test.parabara.kr/api/product"
         let token = "eyJpZCI6ODk9MiwicGhvbm"
@@ -47,6 +46,7 @@ class UpdateViewController: UIViewController {
             "content": content,
             "price": price
         ]
+        
         AF.request(URL, method: .put, parameters: PARAM, headers: ["x-token": token]).responseJSON { response in
             switch response.result {
             case .success(let value):

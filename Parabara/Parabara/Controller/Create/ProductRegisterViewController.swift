@@ -19,9 +19,9 @@ class ProductRegisterViewController: UIViewController {
         
         setting()
     }
+    
     @IBAction func registerButton(_ sender: UIButton) {
         checkTextField() ? checkAlert() : failAlert(message: "빈칸을 채우세요.")
-        
     }
     
     func setting() {
@@ -98,7 +98,6 @@ class ProductRegisterViewController: UIViewController {
         alert.addAction(ok)
         present(alert, animated: true, completion: nil)
     }
-    
 }
 
 extension ProductRegisterViewController: UITextFieldDelegate, UITextViewDelegate {

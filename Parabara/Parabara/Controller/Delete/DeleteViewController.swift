@@ -18,13 +18,13 @@ class DeleteViewController: UIViewController {
         setting()
     }
     
+    @IBAction func deleteButton(_ sender: UIButton) {
+        checkTextField() ? checkAlert(id: deleteTextField.text ?? "") : failAlert(message: "빈칸을 채우세요.")
+    }
+    
     func setting() {
         deleteTextField.delegate = self
         deleteTextField.keyboardType = .numberPad
-    }
-    
-    @IBAction func deleteButton(_ sender: UIButton) {
-        checkTextField() ? checkAlert(id: deleteTextField.text ?? "") : failAlert(message: "빈칸을 채우세요.")
     }
     
     func deleteApi(id: String) {

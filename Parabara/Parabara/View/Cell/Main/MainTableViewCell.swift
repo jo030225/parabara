@@ -14,5 +14,4 @@ class MainTableViewCell: UITableViewCell {
     @IBOutlet weak var mainPrice: UILabel!
     @IBOutlet weak var mainId: UILabel!
     
-    
 }

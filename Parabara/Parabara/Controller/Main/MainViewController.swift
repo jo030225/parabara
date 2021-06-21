@@ -26,7 +26,7 @@ class MainViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        apiCall()
+        productApi()
     }
     
     func setting() {
@@ -44,7 +44,7 @@ class MainViewController: UIViewController {
         searchController.searchBar.placeholder = "상품 ID 검색"
     }
     
-    func apiCall() {
+    func productApi() {
         let URL = "https://api.recruit-test.parabara.kr/api/product"
         let token = "eyJpZCI6ODk9MiwicGhvbm"
         AF.request(URL, method: .get, headers: ["x-token": token]).responseData { data in
@@ -55,16 +55,16 @@ class MainViewController: UIViewController {
         }
     }
     
-    func searchApiCall(id: String) {
+    func searchApi(id: String) {
         let URL = "https://api.recruit-test.parabara.kr/api/product/\(id)"
         let encodingURL = URL.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         let token = "eyJpZCI6ODk9MiwicGhvbm"
-        AF.request(encodingURL, method: .get, headers: ["x-token": token]).responseData(completionHandler: { data in
+        AF.request(encodingURL, method: .get, headers: ["x-token": token]).responseData { data in
             guard let data = data.data else { return }
             self.searchModel = try? JSONDecoder().decode(ProductSearchModel.self, from: data)
             self.mainTableView.reloadData()
             print(data)
-        })
+        }
     }
     
     var isFiltering: Bool {
@@ -115,6 +115,6 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
 
 extension MainViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
-        searchApiCall(id: searchController.searchBar.text ?? "")
+        searchApi(id: searchController.searchBar.text ?? "")
     }
 }

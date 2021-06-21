@@ -27,7 +27,7 @@ class DeleteViewController: UIViewController {
         checkTextField() ? checkAlert(id: deleteTextField.text ?? "") : failAlert(message: "빈칸을 채우세요.")
     }
     
-    func deleteApiCall(id: String) {
+    func deleteApi(id: String) {
         let URL = "https://api.recruit-test.parabara.kr/api/product/\(id)"
         let token = "eyJpZCI6ODk9MiwicGhvbm"
         AF.request(URL, method: .delete, headers: ["x-token": token]).responseJSON { response in
@@ -58,7 +58,7 @@ class DeleteViewController: UIViewController {
     func checkAlert(id: String) {
         let alert = UIAlertController(title: "알림", message: "정말 \(id)를 삭제하시겠습니까?", preferredStyle: UIAlertController.Style.alert)
         let ok = UIAlertAction(title: "확인", style: UIAlertAction.Style.default) { (_) in
-            self.deleteApiCall(id: self.deleteTextField.text ?? "")
+            self.deleteApi(id: self.deleteTextField.text ?? "")
         }
         let cancel = UIAlertAction(title: "취소", style: .destructive)
         alert.addAction(ok)

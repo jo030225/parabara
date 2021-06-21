@@ -547,6 +547,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yP4-tT-JKC">
                                 <rect key="frame" x="192" y="466" width="30" height="30"/>
                                 <state key="normal" title="수정"/>
+                                <connections>
+                                    <action selector="updateButton:" destination="RdQ-zT-dOu" eventType="touchUpInside" id="9kJ-ya-daM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="chm-WY-uY1"/>

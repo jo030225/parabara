@@ -62,6 +62,7 @@ class ProductRegisterViewController: UIViewController {
                 }
                 print(value)
             case .failure(let error):
+                self.failAlert(message: "네트워크 연결 확인해주세요.")
                 print(error)
             }
         }

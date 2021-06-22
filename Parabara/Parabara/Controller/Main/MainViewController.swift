@@ -14,6 +14,13 @@ class MainViewController: UIViewController {
     var model: ProductModel?
     var searchModel: ProductSearchModel?
     
+    var isFiltering: Bool {
+        let searchController = self.navigationItem.searchController
+        let isActive = searchController?.isActive ?? false
+        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
+        return isActive && isSearchBarHasText
+    }
+    
     @IBOutlet weak var mainTableView: UITableView!
     
     override func viewDidLoad() {
@@ -65,13 +72,6 @@ class MainViewController: UIViewController {
             self.mainTableView.reloadData()
             print(data)
         }
-    }
-    
-    var isFiltering: Bool {
-        let searchController = self.navigationItem.searchController
-        let isActive = searchController?.isActive ?? false
-        let isSearchBarHasText = searchController?.searchBar.text?.isEmpty == false
-        return isActive && isSearchBarHasText
     }
 }
 

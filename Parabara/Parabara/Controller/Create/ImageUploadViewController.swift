@@ -96,6 +96,7 @@ class ImageUploadViewController: UIViewController {
         picker.sourceType = .photoLibrary
         present(picker, animated: false, completion: nil)
     }
+    
     func openCamera() {
         if(UIImagePickerController .isSourceTypeAvailable(.camera)){
             picker.sourceType = .camera
